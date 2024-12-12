@@ -37,7 +37,14 @@ const resolvers = {
       users.find((user) => user.id === id);
     },
   },
-  Mutation: {},
+  Mutation: {
+    createUser: (parent, agrs) => {
+      const { name, age, isMarried } = args;
+
+      const newUser = { id: users.length + 1, name, age, isMarried };
+      users.push(newUser);
+    },
+  },
 };
 const server = new ApolloServer({ typeDefs, resolvers });
 
