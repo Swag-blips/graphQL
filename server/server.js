@@ -34,11 +34,11 @@ const resolvers = {
     },
     getUserById: (parent, args) => {
       const id = args.id;
-      users.find((user) => user.id === id);
+      return users.find((user) => user.id === id);
     },
   },
   Mutation: {
-    createUser: (parent, agrs) => {
+    createUser: (parent, args) => {
       const { name, age, isMarried } = args;
 
       const newUser = { id: users.length + 1, name, age, isMarried };
