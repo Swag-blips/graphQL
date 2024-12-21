@@ -1,0 +1,17 @@
+{
+  "name": "graphql-test",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@apollo/server": "^4.11.2",
+    "graphql": "^16.10.0"
+  },
+  "type": "module"
+}
